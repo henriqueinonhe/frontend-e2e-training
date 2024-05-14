@@ -52,6 +52,8 @@ export const testIds = (() => {
 
   const logoutButton = "logout-button";
 
+  const headerTitle = "header-title";
+
   return {
     addNoteButton,
     addNoteForm,
@@ -84,5 +86,6 @@ export const testIds = (() => {
     loginButton,
     logoutButton,
     loginNotice,
+    headerTitle,
   };
 })();
