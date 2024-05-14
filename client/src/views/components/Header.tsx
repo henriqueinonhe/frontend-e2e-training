@@ -27,7 +27,9 @@ export const Header = () => {
           <Button data-testid={testIds.addNoteButton}>Add note</Button>
         </Link>
 
-        <Header.Logout onClick={logout}>Logout</Header.Logout>
+        <Header.Logout onClick={logout} data-testid={testIds.logoutButton}>
+          Logout
+        </Header.Logout>
       </Header.RightRow>
     </Header.Wrapper>
   );

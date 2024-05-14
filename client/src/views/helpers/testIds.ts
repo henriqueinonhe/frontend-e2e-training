@@ -45,6 +45,12 @@ export const testIds = (() => {
     editNoteConfirmationPrompt,
   );
 
+  const loginEmailInput = "login-email-input";
+  const loginPasswordInput = "login-password-input";
+  const loginButton = "login-button";
+
+  const logoutButton = "logout-button";
+
   return {
     addNoteButton,
     addNoteForm,
@@ -72,5 +78,9 @@ export const testIds = (() => {
     editNoteConfirmationPromptYesButton,
     confirmationPromptNoButton,
     confirmationPromptYesButton,
+    loginEmailInput,
+    loginPasswordInput,
+    loginButton,
+    logoutButton,
   };
 })();
