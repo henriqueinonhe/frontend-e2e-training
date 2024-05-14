@@ -48,7 +48,9 @@ export const Login = () => {
         {status === "pending" ? "Loading..." : "Login"}
       </Login.Button>
 
-      <Login.Notice>{status === "error" ? "Login failed!" : ""}</Login.Notice>
+      <Login.Notice data-testid={testIds.loginNotice}>
+        {status === "error" ? "Login failed!" : ""}
+      </Login.Notice>
     </Login.Container>
   );
 };

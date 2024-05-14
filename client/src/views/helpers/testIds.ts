@@ -48,6 +48,7 @@ export const testIds = (() => {
   const loginEmailInput = "login-email-input";
   const loginPasswordInput = "login-password-input";
   const loginButton = "login-button";
+  const loginNotice = "login-notice";
 
   const logoutButton = "logout-button";
 
@@ -82,5 +83,6 @@ export const testIds = (() => {
     loginPasswordInput,
     loginButton,
     logoutButton,
+    loginNotice,
   };
 })();

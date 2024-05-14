@@ -13,6 +13,15 @@ describe("When logging in", () => {
 
       await expect(emailInputLocator).toBeEmpty();
       await expect(passwordInputLocator).toBeEmpty();
+
+      await emailInputLocator.fill("some@example.com");
+      await passwordInputLocator.fill("password");
+
+      await page.getByTestId(testIds.loginButton).click();
+
+      // DO NOT ASSERT AGAINST A SPECIFIC TEXT UNLESS ABSOLUTELY NECESSARY!
+      // And if that's the case, extract the text to a constant
+      await expect(page.getByTestId(testIds.loginNotice)).not.toBeEmpty();
     });
   });
 });
