@@ -13,7 +13,9 @@ export const Header = () => {
   return (
     <Header.Wrapper>
       <Header.LeftRow>
-        <Header.Title>Don't Forget</Header.Title>
+        <Header.Title data-testid={testIds.headerTitle}>
+          Don't Forget
+        </Header.Title>
       </Header.LeftRow>
 
       <Header.RightRow>
