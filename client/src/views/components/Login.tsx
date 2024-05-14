@@ -4,6 +4,7 @@ import Button from "./Button";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import { login } from "@/infra/api/login";
 import { useState } from "react";
+import { testIds } from "../helpers/testIds";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -30,19 +31,26 @@ export const Login = () => {
         label="Email"
         value={email}
         onChange={(value) => setEmail(value)}
+        data-testid={testIds.loginEmailInput}
       />
 
       <TextInput
         label="Password"
         value={password}
         onChange={(value) => setPassword(value)}
+        data-testid={testIds.loginPasswordInput}
       />
 
-      <Login.Button onClick={handleLoginButtonClicked}>
+      <Login.Button
+        onClick={handleLoginButtonClicked}
+        data-testid={testIds.loginButton}
+      >
         {status === "pending" ? "Loading..." : "Login"}
       </Login.Button>
 
-      <Login.Notice>{status === "error" ? "Login failed!" : ""}</Login.Notice>
+      <Login.Notice data-testid={testIds.loginNotice}>
+        {status === "error" ? "Login failed!" : ""}
+      </Login.Notice>
     </Login.Container>
   );
 };
